@@ -1,0 +1,319 @@
+/* Global */
+ @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap");
+
+ :root {
+  --primary-color: #0f1a2c;
+  --secondary-color: #f6ac0f;
+  --text-light: #94a3b8;
+  --white: #ffffff;
+  --teal: #2ec1ac;
+  --teal_hover:  #279e8c;
+  --header-font: "Playfair Display", serif;
+
+}
+
+*{
+  font-family:"Poppins", sans-serif;
+  /* padding: 0; margin: 0;box-sizing: border-box;
+ */
+}
+
+.h-font{
+  font-family:"Merienda", cursive;
+}
+
+/* Remove number arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* Swiper */
+.swiper-slide{
+  transition: all 0.8s ease-in-out;
+}
+
+/* Custom Button */
+.custom-bg{
+  background-color: var(--teal);
+  border: 1px solid var(--teal);
+  transition: all 0.3s ease;
+}
+
+.custom-bg:hover{
+  background-color: var(--teal_hover);
+  border-color: var(--teal_hover);
+  transform: scale(1.05);
+}
+
+/* Availability form */
+.availability-form{
+  margin-top: -50px;
+  z-index: 2;
+  position: relative;
+}
+
+@media screen and (max-width:575px){
+  .availability-form{
+    margin-top: 25px;
+    padding: 0 35px;
+  }
+}
+
+/*  CARD HOVER EFFECT */
+.card{
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  
+}
+
+.card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* Image zoom effect */
+.card img{
+  transition: 0.4s ease;
+}
+
+.card:hover img{
+  transform: scale(1.08);
+}
+
+/* Button spacing */
+.card .btn{
+  transition: all 0.3s ease;
+}
+
+/* Outline button hover */
+.btn-outline-dark:hover{
+  background-color: black;
+  color: white;
+}
+
+/* Badge styling (optional premium look) */
+.badge{
+  margin: 2px;
+  padding: 6px 10px;
+}
+.h-line{
+  width: 150px;
+  height: 1.7px;
+  margin: 0 auto;
+  background-color: black;
+}
+/* ---------------experience----------- */
+.slide-box{
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s ease;
+}
+.slide-box.show{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* -----------------FOOTER AT THE END OF THE WEBSSITE-------------- */
+/*=========================
+   GLOBAL VARIABLES uper likh diya hai 
+========================= */
+/* :root {
+  --primary-color: #0f1a2c;
+  --secondary-color: #f6ac0f;
+  --text-light: #94a3b8;
+  --white: #ffffff;
+  --header-font: "Playfair Display", serif;
+
+} */
+
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* =========================
+   FOOTER MAIN
+========================= */
+.footer {
+  background: linear-gradient(135deg, #0f1a2c, #1e293b);
+  color: var(--white);
+}
+
+.footer__container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 5rem 1rem 3rem;
+  display: grid;
+  gap: 3rem;
+}
+
+/* =========================
+   LOGO SECTION
+========================= */
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.footer__logo div {
+  background: var(--secondary-color);
+  color: #000;
+  padding: 8px 14px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-radius: 4px;
+}
+
+.footer__logo span {
+  line-height: 1.2;
+  font-weight: 600;
+  font-size: 2.3rem;
+}
+
+.section__description {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+.footer__socials {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.footer__socials a {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  background: var(--white);
+  color: #0f1a2c;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.footer__socials a:hover {
+  background: var(--secondary-color);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+/* =========================
+   HEADINGS
+========================= */
+.footer__col h4 {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  font-family: var(--header-font);
+}
+
+/* =========================
+   LINKS (Services)
+========================= */
+.footer__links {
+  list-style: none;
+}
+
+.footer__links li {
+  margin-bottom: 0.8rem;
+}
+
+.footer__links a {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.footer__links a:hover {
+  color: var(--secondary-color);
+  padding-left: 5px;
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+.footer__links span {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+}
+
+.footer__links li {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.footer__links h5 {
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+  color: var(--white);
+}
+
+.footer__links p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+/* =========================
+   COPYRIGHT BAR
+========================= */
+.footer__bar {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  background-color: #020617;
+  color: var(--text-light);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Tablet */
+@media (min-width: 600px) {
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__col:first-child {
+    grid-column: 1 / 3;
+  }
+}
+
+/* Laptop */
+@media (min-width: 900px) {
+  .footer__container {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  .footer__col:first-child {
+    grid-column: auto;
+  }
+}
